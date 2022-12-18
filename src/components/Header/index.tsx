@@ -14,6 +14,7 @@ import {
   Label,
   Outline,
   Span,
+  SpanContact,
 } from "./styles";
 
 const Header = ({ t }: any) => {
@@ -57,9 +58,9 @@ const Header = ({ t }: any) => {
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
         >
-          <Span>
+          <SpanContact>
             <Button>{t("Contact")}</Button>
-          </Span>
+          </SpanContact>
         </CustomNavLinkSmall>
       </>
     );

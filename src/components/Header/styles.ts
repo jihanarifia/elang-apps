@@ -95,6 +95,33 @@ export const Span = styled("span")`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
+  --c: rgb(241, 184, 35); /* the color */
+  --s: 0.15em;
+
+  line-height: 1.1em;
+  padding-bottom: calc(2.1 * var(--s));
+  background: conic-gradient(from 135deg at top, var(--c) 90deg, #0000 0) left 0
+      bottom var(--s) / calc(2 * var(--s)) var(--s) repeat-x,
+    conic-gradient(from -45deg at bottom, var(--c) 90deg, #0000 0) left var(--s)
+      bottom 0 / calc(2 * var(--s)) var(--s) repeat-x;
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0) 50% 100% / var(--_p, 0%) padding-box no-repeat;
+  transition: 0.5s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    // color: rgb(241, 184, 35);
+    // text-underline-position: under;
+    // text-decoration: rgb(241, 184, 35) wavy underline;
+    --_p: 100%;
+    color: var(--c);
+  }
+`;
+
+export const SpanContact = styled("span")`
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   &:hover,
   &:active,
   &:focus {
