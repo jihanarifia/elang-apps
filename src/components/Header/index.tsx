@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
@@ -19,6 +19,8 @@ import {
 
 const Header = ({ t }: any) => {
   const [visible, setVisibility] = useState(false);
+  const classNameStyle = "inverted";
+  const scrollTrigger = 60;
 
   const showDrawer = () => {
     setVisibility(!visible);
@@ -27,6 +29,27 @@ const Header = ({ t }: any) => {
   const onClose = () => {
     setVisibility(!visible);
   };
+  const onScroll = () => {
+    if (
+      window.scrollY >= scrollTrigger ||
+      window.pageYOffset >= scrollTrigger
+    ) {
+      document.getElementsByTagName("header")[0].classList.add(classNameStyle);
+      document.getElementsByTagName("header")[0].style.fontSize = "90px";
+    } else {
+      document
+        .getElementsByTagName("header")[0]
+        .classList.remove(classNameStyle);
+
+      document.getElementsByTagName("header")[0].style.fontSize = "30px";
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const MenuItem = () => {
     const scrollTo = (id: string) => {
@@ -84,7 +107,7 @@ const Header = ({ t }: any) => {
           <Col style={{ marginBottom: "2.5rem" }}>
             <Label onClick={onClose}>
               <Col span={12}>
-                <Menu>Menu</Menu>
+                <Menu>{t("Menu")}</Menu>
               </Col>
               <Col span={12}>
                 <Outline />

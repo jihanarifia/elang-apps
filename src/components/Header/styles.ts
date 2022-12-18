@@ -4,11 +4,22 @@ import { MenuOutlined } from "@ant-design/icons";
 
 export const HeaderSection = styled("header")`
   padding: 1rem 0.5rem;
+  // transition: background-color 0.3s ease;
+
+  // background-color: #f1f1f1;
+  // position: fixed;
+  // top: 0;
 
   .ant-row-space-between {
     align-items: center;
     text-align: center;
   }
+
+  // &.inverted {
+  //   background-color: #00384b;
+  //   box-shadow: 0 3px 5px 0.3px rgba(0,0,0,0.1);
+  //   a {color: red; }
+  // }
 `;
 
 export const LogoContainer = styled(Link)`

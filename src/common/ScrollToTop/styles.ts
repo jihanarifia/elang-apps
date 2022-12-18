@@ -19,7 +19,7 @@ export const ScrollUpContainer = styled("div")<any>`
   &:hover,
   &:active,
   &:focus {
-    background: rgb(224, 224, 224);
+    background: rgb(241, 184, 35);
   }
 
   @media screen and (max-width: 1240px) {
