@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+// background: rgb(0, 77, 104);
 export const FooterSection = styled("footer")`
   background: rgb(241, 242, 243);
   padding: 2.5rem 0;
@@ -28,9 +28,10 @@ export const NavLink = styled(Link)`
     color: #15418e;
   }
 `;
-
+// rgb(0, 77, 104);
+// background: rgb(4, 57, 75);
 export const Extra = styled("section")`
-  background: rgb(241, 242, 243);
+  background: rgb(0, 77, 104);
   position: relative;
   width: 100%;
   margin-right: auto;
@@ -89,7 +90,7 @@ export const Empty = styled("div")`
 
 export const FooterContainer = styled("div")`
   max-width: 510px;
-  width: 100%;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -137,12 +138,13 @@ export const Language = styled("h4")`
 `;
 
 export const Label = styled("label")`
-  font-size: 22px;
+  font-size: 16px;
   text-transform: capitalize;
   color: #00384b;
   display: block;
-  margin-bottom: 2rem;
-  font-family: "Motiva Sans Bold", serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Poppins Bold", serif;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -167,4 +169,9 @@ export const LanguageSwitchContainer = styled("div")`
   display: flex;
   justify-content: space-between;
   width: 85px;
+`;
+
+
+export const Copyright = styled("label")`
+color: #ffffff;
 `;

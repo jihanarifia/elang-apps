@@ -12,13 +12,12 @@ import {
   LogoContainer,
   Para,
   Large,
-  Chat,
-  Empty,
   FooterContainer,
   Language,
   Label,
   LanguageSwitch,
   LanguageSwitchContainer,
+  Copyright,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -49,18 +48,18 @@ const Footer = ({ t }: any) => {
     <>
       <FooterSection>
         <Container>
-          <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
+          {/* <Row justify="space-between"> */}
+          {/* <Col lg={10} md={10} sm={12} xs={12}>
               <Language>{t("Contact")}</Language>
               <Large to="/">{t("Tell us everything")}</Large>
               <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
               </Para>
-              <a href="mailto:l.qqbadze@gmail.com">
+              <a href="mailto:stiki@stiki.ac.id">
                 <Chat>{t(`Let's Chat`)}</Chat>
               </a>
-            </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
+            </Col> */}
+          {/* <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Policy")}</Title>
               <Large to="/" left="true">
                 {t("Application Security")}
@@ -77,32 +76,47 @@ const Footer = ({ t }: any) => {
               <Large left="true" to="/">
                 {t("Customer Support")}
               </Large>
-            </Col>
-          </Row>
+            </Col> */}
+          {/* </Row> */}
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
-              <Empty />
-              <Language>{t("Address")}</Language>
-              <Para>Rancho Santa Margarita</Para>
-              <Para>2131 Elk Street</Para>
-              <Para>California</Para>
+              {/* <Empty /> */}
+              <Language>{t("STIKI MALANG")}</Language>
+              <Para>Sekolah Tinggi Informatika dan Komputer Indonesia</Para>
+              <Para>Jl. Tidar 100 Malang, Jawa Timur</Para>
+              <Para>Telp: 0341-560823</Para>
+              <Para>Fax : 0341-562525</Para>
+              <Para>
+                Email : <a href="mailto:stiki@stiki.ac.id">stiki@stiki.ac.id</a>
+              </Para>
+            </Col>
+            <Col lg={6} md={8} sm={12} xs={12}>
+              <Title>{t("Quick Links")}</Title>
+              <Large left="true" to="sakti.stiki.ac.id">
+                {t("SAKTI")}
+              </Large>
+              <Large left="true" to="ebelajar.stiki.ac.id">
+                {t("eBelajar")}
+              </Large>
+              <Large left="true" to="lowongan.stiki.ac.id">
+                {t("Career")}
+              </Large>
+              <Large left="true" to="perpustakaan.stiki.ac.id">
+                {t("Library")}
+              </Large>
+              <Large left="true" to="jurnal.stiki.ac.id">
+                {t("Journal")}
+              </Large>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Company")}</Title>
-              <Large left="true" to="/">
-                {t("About")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Blog")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Press")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Careers & Culture")}
-              </Large>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
+              <Language>{t("Registration Info")}</Language>
+              <Para style={{ width: "90%" }}>
+                {t("Registration Info Desc")}{" "}
+                <a href="http://pmb.stiki.ac.id">http://pmb.stiki.ac.id</a>{" "}
+                {t("Registration Info Desc2")}{" "}
+                <a href="mailto:pmb@stiki.ac.id">pmb@stiki.ac.id</a>
+              </Para>
+
               <Label htmlFor="select-lang">{t("Language")}</Label>
               <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => handleChange("en")}>
@@ -131,42 +145,44 @@ const Footer = ({ t }: any) => {
           <Row
             justify="space-between"
             align="middle"
-            style={{ paddingTop: "3rem" }}
+            style={{ paddingTop: "1.5rem" }}
           >
+            <FooterContainer>
+              <SocialLink
+                href="https://instagram.com/@stikimalang/"
+                src="instagram.svg"
+              />
+              <SocialLink
+                href="https://facebook.com/stikimalang/"
+                src="facebook.svg"
+              />
+              <SocialLink
+                href="https://www.linkedin.com/school/stiki-malang"
+                src="linkedin.svg"
+              />
+              <SocialLink
+                href="https://twitter.com/stikimalang"
+                src="twitter.svg"
+              />
+              <SocialLink
+                href="https://www.youtube.com/@STIKIMalangOfficial"
+                src="youtube.svg"
+              />
+              <SocialLink href="mailto:stiki@stiki.ac.id" src="mail.svg" />
+            </FooterContainer>
+            <Copyright>
+              {t("Copyright Ⓒ 2022 Thesis Jihan | All Rights Reserved")}
+            </Copyright>
             {/* <NavLink to="/">
               <LogoContainer>
                 <SvgIcon
-                  src="logo.svg"
+                  src="notes.svg"
                   aria-label="homepage"
                   width="150px"
                   height="100px"
                 />
               </LogoContainer>
             </NavLink> */}
-            <FooterContainer>
-              {/* <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
-              />
-              <SocialLink
-                href="https://twitter.com/Adrinlolx"
-                src="twitter.svg"
-              />
-              <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
-                src="linkedin.svg"
-              />
-              <SocialLink
-                href="https://medium.com/@lashakakabadze/"
-                src="medium.svg"
-              />
-              <a href="https://www.buymeacoffee.com/adrinlol">
-                <img
-                  src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=adrinlol&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
-                  alt="Buy me a pizza"
-                />
-              </a> */}
-            </FooterContainer>
           </Row>
         </Container>
       </Extra>

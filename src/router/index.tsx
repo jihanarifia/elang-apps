@@ -24,7 +24,7 @@ const Router = () => {
         })} */}
         <Route path="/" element={<Home />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Suspense>
   );
 };
