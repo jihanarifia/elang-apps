@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { I18nextProvider } from "react-i18next";
-import "antd/dist/antd.css";
+import 'antd/dist/antd.min.css';
+
 import i18n from "./translation";
 import Router from "./router";
 import ReactDOM from "react-dom";
