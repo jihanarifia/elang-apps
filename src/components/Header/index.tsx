@@ -16,6 +16,7 @@ import {
   Span,
   SpanContact,
 } from "./styles";
+import { Link } from "react-router-dom";
 
 const Header = ({ t }: any) => {
   const [visible, setVisibility] = useState(false);
@@ -64,8 +65,10 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
           <Span>{t("Home")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
+        <CustomNavLinkSmall>
+          <Link to={"about"}>
+            <Span>{t("About")}</Span>
+          </Link>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <Span>{t("Program Study")}</Span>
