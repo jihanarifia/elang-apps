@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import routes from "./config";
 import { Styles } from "../styles/styles";
-import Home from "src/pages/Home";
+import { About, History, Home } from "src/pages";
 
 const Router = () => {
   return (
@@ -23,8 +23,12 @@ const Router = () => {
           );
         })} */}
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/history" element={<History />} />
       </Routes>
       <Footer />
+      {/* Users/jihanramadhanti/Documents/jihan/elang-apps/src/pages/About/index
+      /Users/jihanramadhanti/Documents/jihan/elang-apps/src/pages/About/index.tsx */}
     </Suspense>
   );
 };
