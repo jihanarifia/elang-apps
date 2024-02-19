@@ -70,6 +70,12 @@ const Header = ({ t }: any) => {
             <Span>{t("About")}</Span>
           </Link>
         </CustomNavLinkSmall>
+
+        <CustomNavLinkSmall>
+          <Link to={"history"}>
+            <Span>{t("History")}</Span>
+          </Link>
+        </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <Span>{t("Program Study")}</Span>
         </CustomNavLinkSmall>

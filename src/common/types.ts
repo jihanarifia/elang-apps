@@ -35,3 +35,11 @@ export interface validateProps {
   message: string;
   email: string;
 }
+
+export {};
+
+declare global {
+  interface Window {
+    SwiperElementRegisterParams: any; // 👈️ turn off type checking
+  }
+}
